@@ -1,0 +1,47 @@
+{
+    "env": {
+        "node": true
+    },
+    "ignorePatterns": [
+        "webpack.config.js",
+        "**/*.html",
+        "dist/**/*",
+        "node_modules/**/*"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.ts"
+            ],
+            "parserOptions": {
+                "project": [
+                    "tsconfig.json"
+                ],
+                "createDefaultProgram": true
+            },
+            "extends": [
+                "eslint:recommended",
+                "plugin:@typescript-eslint/recommended",
+                "prettier",
+                "plugin:prettier/recommended"
+            ],
+            "rules": {
+                "no-case-declarations": "warn",
+                "no-prototype-builtins": "warn",
+                "no-fallthrough": "warn",
+                "no-useless-escape": "warn",
+                "@typescript-eslint/no-explicit-any": "warn",
+                "@typescript-eslint/no-unused-vars": "warn",
+                "@typescript-eslint/no-empty-functions": "off",
+                "@typescript-eslint/no-empty-interface": "off",
+                "@typescript-eslint/ban-types": "off",
+                "@typescript-eslint/no-floating-promises": [
+                    2,
+                    {
+                        "ignoreIIFE": true
+                    }
+                ]
+            }
+        }
+    ]
+}

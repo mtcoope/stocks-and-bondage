@@ -1,0 +1,7 @@
+.eslintcache
+.jestcache
+coverage
+dist
+node_modules
+version.txt
+*.tsbuildinfo
